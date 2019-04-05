@@ -7,11 +7,8 @@ runner = 'arm-none-eabi-gdb'
 # linker = "arm-none-eabi-ld"
 # ar = "arm-none-eabi-ar"
 rustflags = [
-  # Don't link with default start files.
-  "-C", "link-arg=-nostartfiles",
-
   # Select ar linker: (default)
-  "-C", "link-arg=-Wl,-Tlink.x",
+  "-C", "link-arg=-Tlink.x",
 
   # OR Select GNU linker:
   # "-C", "linker=arm-none-eabi-ld",
